@@ -1,0 +1,15 @@
+com\neoris\jba\apiuser\domain\entity\PhoneTest.class
+com\neoris\jba\apiuser\infrastructure\dto\ResponseDtoTest.class
+com\neoris\jba\apiuser\domain\entity\UserTest.class
+com\neoris\jba\apiuser\infrastructure\controller\UserControllerTest.class
+com\neoris\jba\apiuser\infrastructure\validation\PasswordValidatorTest.class
+com\neoris\jba\apiuser\jwt\JwtUtilsTest.class
+com\neoris\jba\apiuser\domain\validation\UniqueEmailValidatorTest.class
+com\neoris\jba\apiuser\config\ValidationExceptionHandlerTest.class
+com\neoris\jba\apiuser\infrastructure\usecase\Impl\UserCaseImplTest.class
+com\neoris\jba\apiuser\infrastructure\dto\PhoneDtoTest.class
+com\neoris\jba\apiuser\domain\service\impl\UserImplTest.class
+com\neoris\jba\apiuser\infrastructure\validation\EmailValidatorTest.class
+com\neoris\jba\apiuser\ApiUserApplicationTests.class
+com\neoris\jba\apiuser\infrastructure\dto\UserDtoTest.class
+com\neoris\jba\apiuser\infrastructure\dto\MessageDtoTest.class

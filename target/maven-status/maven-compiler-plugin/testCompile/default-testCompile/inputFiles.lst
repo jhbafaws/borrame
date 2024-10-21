@@ -1,0 +1,15 @@
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\domain\service\impl\UserImplTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\infrastructure\validation\EmailValidatorTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\infrastructure\dto\MessageDtoTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\infrastructure\dto\PhoneDtoTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\infrastructure\controller\UserControllerTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\domain\validation\UniqueEmailValidatorTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\domain\entity\UserTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\ApiUserApplicationTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\domain\entity\PhoneTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\infrastructure\dto\ResponseDtoTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\infrastructure\dto\UserDtoTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\config\ValidationExceptionHandlerTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\infrastructure\usecase\Impl\UserCaseImplTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\jwt\JwtUtilsTest.java
+C:\wsNeoris\api-user\src\test\java\com\neoris\jba\apiuser\infrastructure\validation\PasswordValidatorTest.java

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UniqueEmailValidator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">api-user</a> &gt; <a href="index.source.html" class="el_package">com.neoris.jba.apiuser.domain.validation</a> &gt; <span class="el_source">UniqueEmailValidator.java</span></div><h1>UniqueEmailValidator.java</h1><pre class="source lang-java linenums">package com.neoris.jba.apiuser.domain.validation;
+
+import com.neoris.jba.apiuser.domain.validation.anotation.UniqueEmail;
+import com.neoris.jba.apiuser.infrastructure.dto.UserDto;
+import com.neoris.jba.apiuser.infrastructure.usecase.IUserCase;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+
+public class UniqueEmailValidator implements ConstraintValidator&lt;UniqueEmail, String&gt; {
+
+    private final IUserCase iUserCase;
+
+    // Inyección del servicio o caso de uso para verificar el correo electrónico
+<span class="fc" id="L14">    public UniqueEmailValidator(IUserCase iUserCase) {</span>
+<span class="fc" id="L15">        this.iUserCase = iUserCase;</span>
+<span class="fc" id="L16">    }</span>
+
+    @Override
+    public void initialize(UniqueEmail constraintAnnotation) {
+        // Esta función se puede utilizar para inicializar el validador, si es necesario
+<span class="nc" id="L21">    }</span>
+
+    @Override
+    public boolean isValid(String email, ConstraintValidatorContext context) {
+<span class="fc bfc" id="L25" title="All 4 branches covered.">        if (email == null || email.isBlank()) {</span>
+<span class="fc" id="L26">            return true; // La validez se maneja por otras anotaciones como @NotBlank</span>
+        }
+<span class="fc" id="L28">        UserDto existingUser = iUserCase.getByEmailUseCase(email);</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        return existingUser == null; // Devuelve true si el correo no existe (válido), false si ya está registrado</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
