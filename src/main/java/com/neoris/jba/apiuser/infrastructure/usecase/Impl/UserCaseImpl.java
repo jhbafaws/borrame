@@ -62,6 +62,7 @@ public class UserCaseImpl implements IUserCase {
         resp.setLastLogin(saveUser.getLastLogin());
         resp.setToken(saveUser.getToken());
         resp.setIsActive(saveUser.getIsActive());
+        resp.setUserName("Update Jenkins");
         return resp;
     }
 

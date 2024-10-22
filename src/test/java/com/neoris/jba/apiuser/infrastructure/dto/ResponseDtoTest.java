@@ -37,7 +37,7 @@ class ResponseDtoTest {
     void testResponseDtoAllArgsConstructor() {
         // Arrange
         Date now = new Date();
-        ResponseDto responseDto = new ResponseDto("123", now, now, now, "someToken", true);
+        ResponseDto responseDto = new ResponseDto("123", now, now, now, "someToken", true, "update");
 
         // Assert
         assertEquals("123", responseDto.getId());
@@ -67,7 +67,7 @@ class ResponseDtoTest {
         // Arrange
         ObjectMapper objectMapper = new ObjectMapper();
         Date now = new Date();
-        ResponseDto responseDto = new ResponseDto("123", now, now, now, "someToken", true);
+        ResponseDto responseDto = new ResponseDto("123", now, now, now, "someToken", true, "update");
 
         // Act
         String json = objectMapper.writeValueAsString(responseDto);

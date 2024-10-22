@@ -32,5 +32,8 @@ public class ResponseDto implements Serializable {
     private String token;
     @JsonProperty("isActive")
     private Boolean isActive;
+    @JsonProperty("user_name")
+    private String  userName;
+
 
 }
