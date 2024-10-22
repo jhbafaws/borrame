@@ -211,3 +211,6 @@
     user_id UUID,
     CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES usuario(id) ON DELETE CASCADE
     );
+
+
+## Aplicacion subida a Jenkis
