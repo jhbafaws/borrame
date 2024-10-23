@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 @Getter
-<span class="fc" id="L19">@Setter</span>
+<span class="pc" id="L19">@Setter</span>
 <span class="pc" id="L20">@Builder</span>
 <span class="fc" id="L21">@AllArgsConstructor</span>
 <span class="fc" id="L22">@NoArgsConstructor</span>
@@ -50,10 +50,13 @@ public class UserDto implements Serializable {
 <span class="fc" id="L50">    private Date modified;</span>
     @JsonProperty(&quot;last_login&quot;)
 <span class="fc" id="L52">    private Date lastLogin;</span>
+    @JsonProperty(&quot;user_name&quot;)
+<span class="fc" id="L54">    private String username;</span>
     @JsonProperty(&quot;token&quot;)
-<span class="fc" id="L54">    private String token;</span>
+<span class="fc" id="L56">    private String token;</span>
+
     @Valid
     @JsonProperty(&quot;phones&quot;)
-<span class="fc" id="L57">    private List&lt;PhoneDto&gt; phones;</span>
+<span class="fc" id="L60">    private List&lt;PhoneDto&gt; phones;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

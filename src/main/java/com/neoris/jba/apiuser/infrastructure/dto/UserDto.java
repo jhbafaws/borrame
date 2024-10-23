@@ -55,7 +55,6 @@ public class UserDto implements Serializable {
     @JsonProperty("token")
     private String token;
 
-
     @Valid
     @JsonProperty("phones")
     private List<PhoneDto> phones;

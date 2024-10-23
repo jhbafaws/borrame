@@ -53,7 +53,7 @@ class UserDtoTest {
                 new PhoneDto("1", "123456789", "1", "44"),
                 new PhoneDto("2", "987654321", "2", "44")
         );
-        UserDto userDto = new UserDto("user123", "Jorge Bravo", "jbravo@example.com", "Jbravo1@", true, now, now, now, "someToken", phones);
+        UserDto userDto = new UserDto("user123", "Jorge Bravo", "jbravo@example.com", "Jbravo1@", true, now, now, now, "username", "someToken", phones);
 
         // Assert
         assertEquals("user123", userDto.getId());

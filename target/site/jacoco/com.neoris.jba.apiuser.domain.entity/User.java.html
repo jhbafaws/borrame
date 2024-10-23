@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Getter
-<span class="fc" id="L12">@Setter</span>
+<span class="pc" id="L12">@Setter</span>
 <span class="pc" id="L13">@Builder</span>
 <span class="fc" id="L14">@NoArgsConstructor</span>
 <span class="fc" id="L15">@AllArgsConstructor</span>
@@ -43,12 +43,16 @@ public class User {
     @Column(name = &quot;last_login&quot;)
 <span class="fc" id="L44">    private Date lastLogin;</span>
 
+    @Column(name = &quot;user_name&quot;)
+<span class="fc" id="L47">    private String userName;</span>
+
     @Column(name = &quot;token&quot;)
-<span class="fc" id="L47">    private String token;</span>
+<span class="fc" id="L50">    private String token;</span>
+
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = &quot;user&quot;, fetch = FetchType.LAZY)
     @JsonManagedReference
-<span class="fc" id="L51">    private List&lt;Phone&gt; phones;</span>
+<span class="fc" id="L55">    private List&lt;Phone&gt; phones;</span>
 
 
 }
