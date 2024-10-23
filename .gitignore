@@ -26,3 +26,5 @@ build/
 
 ### VS Code ###
 .vscode/
+# Ignorar la carpeta target generada por Maven
+/target/
