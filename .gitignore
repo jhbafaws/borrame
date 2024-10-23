@@ -1,57 +1,33 @@
-# Archivos de Maven
+HELP.md
 target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# Archivos de Gradle
-.gradle
-build/
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-# IntelliJ IDEA
+### IntelliJ IDEA ###
+.idea
+*.iws
 *.iml
 *.ipr
-*.iws
-.idea/
 
-# VS Code
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
 .vscode/
-
-# Eclipse
-.project
-.classpath
-.settings/
-bin/
-
-# Archivos de logs
-*.log
-
-# Sistema operativo o archivos de entorno de trabajo
-.DS_Store
-Thumbs.db
-
-# Archivos de configuración de entornos locales
-application.properties
-application.yml
-.env
-
-# Archivos de cobertura de código
-jacoco.exec
-/target/site/jacoco/
-*.csv
-*.lcov
-
-# Archivos de generación de la herramienta Lombok
-*.lombok.config
-
-# Archivos de dependencias locales
-.mvn/
-!.mvn/wrapper/maven-wrapper.jar
-
-# Otros directorios o archivos que deben ignorarse
-log/
-logs/
-tmp/
-hs_err_pid*
