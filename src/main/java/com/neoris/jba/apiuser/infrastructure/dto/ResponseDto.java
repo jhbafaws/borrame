@@ -28,12 +28,12 @@ public class ResponseDto implements Serializable {
     private Date modified;
     @JsonProperty("last_login")
     private Date lastLogin;
+    @JsonProperty("user_name")
+    private String userName;
     @JsonProperty("token")
     private String token;
     @JsonProperty("isActive")
     private Boolean isActive;
-    @JsonProperty("user_name")
-    private String  userName;
 
 
 }

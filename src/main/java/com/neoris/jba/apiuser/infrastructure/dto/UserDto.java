@@ -50,8 +50,12 @@ public class UserDto implements Serializable {
     private Date modified;
     @JsonProperty("last_login")
     private Date lastLogin;
+    @JsonProperty("user_name")
+    private String username;
     @JsonProperty("token")
     private String token;
+
+
     @Valid
     @JsonProperty("phones")
     private List<PhoneDto> phones;

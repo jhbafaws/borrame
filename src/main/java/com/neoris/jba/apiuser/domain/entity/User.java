@@ -43,8 +43,12 @@ public class User {
     @Column(name = "last_login")
     private Date lastLogin;
 
+    @Column(name = "user_name")
+    private String userName;
+
     @Column(name = "token")
     private String token;
+
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.LAZY)
     @JsonManagedReference

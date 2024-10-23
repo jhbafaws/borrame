@@ -19,7 +19,6 @@ import java.util.stream.Collectors;
 @Service
 public class UserCaseImpl implements IUserCase {
 
-
     @Autowired
     JwtUtils jwtUtils;
 
@@ -27,23 +26,24 @@ public class UserCaseImpl implements IUserCase {
     IUser iUser;
 
     @Override
-    public ResponseDto addUserUseCase(UserDto usuarioDto) {
-        String token = jwtUtils.generateAccessToken(usuarioDto.getEmail());
+    public ResponseDto addUserUseCase(UserDto userDto) {
+        String token = jwtUtils.generateAccessToken(userDto.getEmail());
         Timestamp sqlTimestamp = Timestamp.from(Instant.now());
 
         User userDb = User.builder()
-                .name(usuarioDto.getName())
-                .email(usuarioDto.getEmail())
-                .password(usuarioDto.getPassword())
-                .isActive(usuarioDto.getIsActive())
+                .name(userDto.getName())
+                .email(userDto.getEmail())
+                .password(userDto.getPassword())
+                .isActive(userDto.getIsActive())
                 .create(sqlTimestamp)
                 .modified(sqlTimestamp)
                 .lastLogin(sqlTimestamp)
+                .userName(userDto.getUsername())
                 .isActive(true)
                 .token(token)
                 .build();
 
-        List<Phone> phoneList = usuarioDto.getPhones().stream()
+        List<Phone> phoneList = userDto.getPhones().stream()
                 .map(phoneDto -> Phone.builder()
                         .number(phoneDto.getNumber())
                         .cityCode(phoneDto.getCityCode())
@@ -62,7 +62,7 @@ public class UserCaseImpl implements IUserCase {
         resp.setLastLogin(saveUser.getLastLogin());
         resp.setToken(saveUser.getToken());
         resp.setIsActive(saveUser.getIsActive());
-        resp.setUserName("Update Jenkins");
+        resp.setUserName(saveUser.getUserName());
         return resp;
     }
 
