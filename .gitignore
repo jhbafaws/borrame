@@ -1,30 +1,57 @@
-HELP.md
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Archivos de Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# Archivos de Gradle
+.gradle
+build/
+
+# IntelliJ IDEA
 *.iml
 *.ipr
+*.iws
+.idea/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# VS Code
 .vscode/
-# Ignorar la carpeta target generada por Maven
-/target/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# Archivos de logs
+*.log
+
+# Sistema operativo o archivos de entorno de trabajo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración de entornos locales
+application.properties
+application.yml
+.env
+
+# Archivos de cobertura de código
+jacoco.exec
+/target/site/jacoco/
+*.csv
+*.lcov
+
+# Archivos de generación de la herramienta Lombok
+*.lombok.config
+
+# Archivos de dependencias locales
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Otros directorios o archivos que deben ignorarse
+log/
+logs/
+tmp/
+hs_err_pid*
