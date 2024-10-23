@@ -62,24 +62,25 @@ import java.util.stream.Collectors;
 <span class="fc" id="L62">        resp.setLastLogin(saveUser.getLastLogin());</span>
 <span class="fc" id="L63">        resp.setToken(saveUser.getToken());</span>
 <span class="fc" id="L64">        resp.setIsActive(saveUser.getIsActive());</span>
-<span class="fc" id="L65">        return resp;</span>
+<span class="fc" id="L65">        resp.setUserName(&quot;Update Jenkins&quot;);</span>
+<span class="fc" id="L66">        return resp;</span>
     }
 
     @Override
     public UserDto getByEmailUseCase(String email) {
 
-<span class="fc" id="L71">        Optional&lt;User&gt; userOpt = iUser.getUserByEmail(email);</span>
+<span class="fc" id="L72">        Optional&lt;User&gt; userOpt = iUser.getUserByEmail(email);</span>
 
-<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (userOpt.isEmpty()) return null;</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">        if (userOpt.isEmpty()) return null;</span>
 
-<span class="fc" id="L75">        User user = userOpt.get();</span>
-<span class="fc" id="L76">        return UserDto.builder()</span>
-<span class="fc" id="L77">                .id(user.getId())</span>
-<span class="fc" id="L78">                .name(user.getName())</span>
-<span class="fc" id="L79">                .email(user.getEmail())</span>
-<span class="fc" id="L80">                .password(user.getPassword())</span>
-<span class="fc" id="L81">                .isActive(user.getIsActive())</span>
-<span class="fc" id="L82">                .build();</span>
+<span class="fc" id="L76">        User user = userOpt.get();</span>
+<span class="fc" id="L77">        return UserDto.builder()</span>
+<span class="fc" id="L78">                .id(user.getId())</span>
+<span class="fc" id="L79">                .name(user.getName())</span>
+<span class="fc" id="L80">                .email(user.getEmail())</span>
+<span class="fc" id="L81">                .password(user.getPassword())</span>
+<span class="fc" id="L82">                .isActive(user.getIsActive())</span>
+<span class="fc" id="L83">                .build();</span>
     }
 }
 
