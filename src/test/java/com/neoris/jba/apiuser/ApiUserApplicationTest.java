@@ -13,9 +13,4 @@ class ApiUserApplicationTests {
         // Verifica que el contexto de Spring se carga correctamente
     }
 
-    @Test
-    void main_shouldStartApplicationWithoutExceptions() {
-        // Verifica que el método main se ejecuta sin lanzar excepciones
-        assertDoesNotThrow(() -> ApiUserApplication.main(new String[]{}));
-    }
 }

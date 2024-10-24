@@ -51,7 +51,7 @@ public class UserDto implements Serializable {
     @JsonProperty("last_login")
     private Date lastLogin;
     @JsonProperty("user_name")
-    private String username;
+    private String userName;
     @JsonProperty("token")
     private String token;
 

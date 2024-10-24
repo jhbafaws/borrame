@@ -38,7 +38,7 @@ public class UserCaseImpl implements IUserCase {
                 .create(sqlTimestamp)
                 .modified(sqlTimestamp)
                 .lastLogin(sqlTimestamp)
-                .userName(userDto.getUsername())
+                .userName(userDto.getUserName())
                 .isActive(true)
                 .token(token)
                 .build();
