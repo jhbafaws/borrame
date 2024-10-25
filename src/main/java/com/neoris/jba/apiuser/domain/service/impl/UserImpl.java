@@ -12,10 +12,12 @@ import java.util.Optional;
 public class UserImpl implements IUser {
     @Autowired
     UserRepository userRepository;
+
     @Override
     public User saveUser(User user) {
         return userRepository.save(user);
     }
+
     @Override
     public Optional<User> getUserByEmail(String email) {
         return userRepository.findByEmail(email);

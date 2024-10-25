@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     IUserCase iUserCase;
+
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "register User")
     @ApiResponses(value = {

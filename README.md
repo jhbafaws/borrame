@@ -36,7 +36,6 @@
     Configuracion de regex (regular expression) en application.properties para Email y Password
     Token persistido con dato de email de usaurio
     DockerFile. Genera Imagen de la aplicación y permite su ejecución en docker
-        
 
 ## Prequesitos
 
@@ -100,7 +99,6 @@
 
     Una vez levantada la aplicación en docker se puede probar con postman o swagger.
 
-
 ## Pruebas de la ejecución de la aplicación y coverage de las pruebas.
 
     Una vez levantada la aplicación con alguno de los comandos del punto anterior, Y para probar la aplicación ejecutar con Postman seguir las siguientes indicaciones
@@ -152,10 +150,6 @@
 
     - Con la aplicación ejecutando en Swagger se pueden realizar pruebas similares a las realizadas en Postman
 
-
-    
-
-
 ## UNIT TEST: Ejecución de la pruebas unitarias
 
     - Ejecutar en linea de comando del proyecto
@@ -169,7 +163,6 @@
             target/site/jacoco/index.html
 
         Copiar path absoluto copiado en browse Google u otro. Con esto se veran las pruebas realizadas y el coverage alcanzado
-
 
 ## Base de datos en memoria
 
@@ -211,6 +204,5 @@
     user_id UUID,
     CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES usuario(id) ON DELETE CASCADE
     );
-
 
 ## Aplicacion subida a Jenkis

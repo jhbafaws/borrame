@@ -7,5 +7,5 @@ public interface IUserCase {
 
     ResponseDto addUserUseCase(UserDto usuarioDto);
 
-    UserDto getByEmailUseCase(String Email);
+    UserDto getByEmailUseCase(String email);
 }

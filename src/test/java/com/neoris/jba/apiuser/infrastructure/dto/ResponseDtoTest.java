@@ -37,7 +37,7 @@ class ResponseDtoTest {
     void testResponseDtoAllArgsConstructor() {
         // Arrange
         Date now = new Date();
-        ResponseDto responseDto = new ResponseDto("123", now, now, now, "someToken" ,"someToken", true);
+        ResponseDto responseDto = new ResponseDto("123", now, now, now, "someToken", "someToken", true);
 
         // Assert
         assertEquals("123", responseDto.getId());
